@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script >
+        var a = 6;
+        var copytruoc = a--;
+        //việc 1: 'a copy ' , a = 6;
+        //Việc 2: -1 cho a. a = a - 1 => a = 5
+        //Việc 3: trả vẻ 'a copy'
+
+        console.log(copytruoc); // ra 6
+        console.log(a); // ra 5
+
+        var number = 6;
+
+        var output = ++number *2 - number-- *2;
+        //khi   ++number xong thì nó đã là 7. còn sang number-- thì trả về biến đang copy là 7 còn trừ thực hiện sau nhưng k đc dùng
+        // 7 *2 - 7 *2
+        console.log(output);
+
+        //Toán tử so sánh tuyệt đối ===
+        // !== khác tuyệt đối
+
+        //Toán tử logical và câu lệnh đk if
+        //Trong if( Boolean )
+        //Còn toán tử && thì k boolean true fasle
+        //trừ khi nằm trong 6 giá trị này khi không phải trúng thì boolean sẽ cho thành false
+        /*
+            ''
+            false
+            null
+            Nan // đại diện cho 1 số k hợp lệ var number = 20 / 'ABC';
+            undefined
+            0
+        */
+        //VD: 
+        var result = 'A' && 'B' && 'C';
+        //nó sẽ chạy từ trái qua phải xem có 1 trong 6 trường hợp kia ko
+        //nếu k có n sẽ nhận ra giá trị cuối cùng là C
+        console.log(result);
+        
+    </script>
+</body>
+</html> 

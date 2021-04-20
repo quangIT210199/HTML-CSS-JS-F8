@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            position: relative;
+            width: 300px;
+            background-color: blueviolet;
+            /* width: 45%;
+            margin: 20px;
+            height: 300px; */
+            border: 1px solid blue;
+            overflow: hidden;
+            /* position: relative;
+            float: left;
+            display: inline-block;
+            cursor: pointer; */
+        }
+        .child{
+            /* width: 100%;
+            height: 100%; */
+            padding-top: 100%;
+            background-color: black;
+            background-image: url(https://media.timeout.com/images/101602611/image.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s;
+        }
+        .parent:hover .child,
+        .parent:focus .child{
+            transform: scale(1.2);
+        }
+        a {
+            display: none;
+            font-size: 35px;
+            color: #ffffff !important;
+            font-family: sans-serif;
+            text-align: center;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 50px;
+            cursor: pointer;
+        }
+        .parent:hover a,
+        .parent:focus a {
+            display: block;
+        }  
+        .child::before{
+            content: "";
+            display: none;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(52, 73, 94, 0.75);
+        }
+        .parent:hover .child:before,
+        .parent:focus .child:before {
+            display: block;
+        }  
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <a>Hương</a>
+        </div>
+     </div>
+</body>
+</html>

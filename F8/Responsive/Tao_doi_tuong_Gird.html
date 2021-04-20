@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- My Library -->
+    <link rel="stylesheet" href="Grid_Systerm.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+        .course-item {
+            background-color: orange ;
+            height: 260px;
+        }
+        h1 {
+            color: #fff;
+            line-height: 260px;
+            margin: 0;
+        }
+        @media (max-width: 1023px) {
+            .course-item {
+                margin-top: 16px;
+            }
+        }
+        .category {
+            background-color: orangered;
+            height: 260px;
+        }
+        ul {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<!-- Column : col
+    Prefix class
+        -c- mobile
+        -m- tablet
+        -l- Pc
+-->
+<body>
+    <div class="grid wide container">
+        <div class="row">
+            <div class="col l-3 m-0 c-0">
+                <div class="category">
+                    <ul>
+                        <li>JAVA</li>
+                        <li>PHP</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col l-9 m-12 c-12">
+                <div class="row">
+                    <div class="col l-4 m-6 c-12">
+                        <div class="course-item">
+                            <h1>Course 1</h1>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="course-item">
+                            <h1>Course 1</h1>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="course-item">
+                            <h1>Course 1</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

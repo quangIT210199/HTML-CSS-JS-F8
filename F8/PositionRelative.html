@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<style>
+		html{
+			margin: 0;
+		}
+		h1{
+			position: relative;
+			top:100px;
+		}
+		.box{
+			height: 100px;
+			width: 200px;
+			background-color: black;
+			position: relative;
+			top:300px;
+		}
+		.box-chil{
+			height: 50px;
+			width: 100px;
+			background-color: teal;
+			position: absolute;
+			left: 150px;
+		}
+		.header{
+			height: 100px;
+			width: 100%;
+			background-color: tomato;
+			position: fixed;
+			top: 0;
+		}
+	</style>
+	
+</head>
+<!--
+	- Đối với relative là vị trí tương đối
+	vị trí của n sẽ k phụ thuộc vào tk nào cả. chỉ phụ thuộc vào chính tọa độ gốc của n
+	- Đối với Absolute n sẽ phụ thuộc vào tk cha gần nhất có thuộc tính Position để lấy gốc tọa độ . Chú ý : kể cả Postion : Absolute ; vẫn tính là cha
+	-Đối với fixed thì dùng khi tọa độ phụ thuộc vào trình duyệt
+-->
+
+<body>
+	<div class="header"></div>
+	<div class="box">
+		<div class="box-chil">
+		
+		</div>
+	</div>
+	<h1>Position</h1>
+	<ul>
+		<li>Relative : nên nhớ top left right bottom chỉ hoạt động khi có Relative</li>
+		<li>Absolute</li>
+		<li>Fixed</li>
+		<li>Sticky</li>
+	</ul>
+</body>
+</html>

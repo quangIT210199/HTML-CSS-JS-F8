@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<style>
+		#container{
+			display: grid;
+			grid-template-columns: minmax(min-content, 300px) minmax(200px, 1fr) 150px;
+			grid-template-rows: 100px 50px;
+			grid-gap: 5px;
+			box-sizing: border-box;
+			height: 400px;
+			width: 100%;
+			background-color: #07a787;
+			padding: 10px;
+		}
+		#container > div{
+			background-color: #ffa400;
+  	background-color: #ffa400;		padding: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+  <div class="item">
+    Item as wide as the content, but at most 300 pixels. This content is so long long long and long long long
+  </div>
+  <div class="item">
+    Item with flexible width but a minimum of 200 pixels.
+  </div>
+  <div class="item">
+    Inflexible item of 150 pixels width.
+  </div>
+	<div>
+			quang
+		</div>
+</div>
+</body>
+</html>

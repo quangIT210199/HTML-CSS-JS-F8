@@ -1,0 +1,22 @@
+Hệ thống lưới - Phần 2
+I.Thành phần chính lý thuyết
+
+1. Column - Cột
+Độ rộng sử dụng đơn vị % (tương đối) giúp linh động, dễ dàng tương thích với độ rộng
+khác nhau của các thiết bị. Số lượng cột trong gird systerm được xác định trước
+VD: PC 12|16 cột, tablet 8 cột, moblie 4 cột.
+
+2. Gutter - Đường ngăn cách (rãnh ngăn)
+Là khoảng cách 2 phía của 1 cột (Padding left right), tạo nên rãnh ngăn giữa các cột.
+Độ rộng rãnh ngăn có thể thay đổi cho phù hợp với thiết kế hoặc độ rộng màn hình
+VD: PC/Tablet 24px , mobile 16px)
+
+3. Marigin - Phần lề
+Là khoảng cách 2 bên trái/phải của bố cục chính của website. Độ rộng
+phần lề thay đổi để phù hợp với các kích thước. VD: Phần lê lớn thích hợp cho màn hình lớn như PC,
+phần lề nhỏ thích hợp cho màn hình nhỏ như Tablet, mobile
+
+II. Thành phần chính làm việc với Css
+1.Grid - Lưới (Thường là phần cha, chứa Row và Column)
+2.Row - Dòng(Dòng - chiều ngang chứa Column)
+3.Column - Cột(Chứa nội dung/ thành phần trên website)

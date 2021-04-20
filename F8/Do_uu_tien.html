@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<style> 
+		h1{
+			color: aqua;
+		}
+		.class{
+			color: yellowgreen;
+		}
+		#class2{
+			color: violet !important;
+		}
+		#class2{
+			color: teal;
+		}
+/*		Có 1 cách cộng điểm ưu tiến 
+		Ví dụ: #class2.class{ color: blue;}
+		thì độ ưu tiên là 100 + 10 = 110
+		!important: ưu tiên
+		*/
+	</style>
+</head>
+
+<body>
+	<div>
+		<h1  class="class" id="class2">Priority</h1>
+		<ol>
+			<li>InTernal, External thì độ ưu tiên không phân chia</li>
+			<li>Inline- 1000</li>
+			<li>#id -100</li>
+			<li>.class- 10</li>
+			<li>tag - 1. VD : h1{}</li>
+			<li>Equal specificity : khi nào gọi thẻ giống nhau n sẽ ưu tiên cái mới hơn</li>
+			<li>Universal selector and inherited</li>
+		</ol>
+	</div>
+</body>
+</html>

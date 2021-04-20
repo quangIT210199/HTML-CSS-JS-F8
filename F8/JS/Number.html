@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //1. Tạo giá trị Number
+    //-Các cách tạo
+    //-Dùng cách nào? Tại sao?
+    //-Kiểm tra data type
+
+    var age = 18;
+    var PI = 3.14;
+    var ortherNumber = new Number(9); // tạo thành object. nên k hay dùng cách này
+    console.log(typeof ortherNumber); // object not Number
+    
+    // 1 số k hợp lê thì thành kiểu Nan
+    var number = 20 / 'ABC'; 
+    console.log(number); // => Nan
+    //muốn kiểm tra là Nan thì
+    console.log(isNaN(number)); //=> true
+    // keyword : javascript number methods
+
+    //2.Làm việc với Number
+    //-To string
+    //-To fixed
+    //toString() : dùng để chuyển number thành String
+ 
+    console.log(age.toString());
+
+    //to fixed : để làm tròn số thập phân
+    console.log(PI.toFixed(2)); // 2 là 2 số sau số thập phân vd . 3000.213123 => 3000.21
+    </script>
+</body>
+</html>

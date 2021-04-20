@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Kieu_DL.js"></script>
+</head>
+<!--1. Kiểu DL nguyên thủy
+    -Nubmer
+    -String : String là bất biến k thay đổi được khi được khởi tạo ra. nếu thay đổi thì là tạo 1 đối tượng khác r
+    -Boolean
+    -Undefined
+    -Null
+    -Symbol
+    khi được tạo ra DL dc lưu vào bộ nhớ. khi bị thay đổi thì DL cũ k bị thay đổi
+    2. Dữ liệu phức tạp - Complex Data
+    -Function
+    -Object
+-->
+<body>
+    <script>
+        //Undefine type : chưa dc gán giá trị
+        var age;
+
+        //Symbol(mô tả) : đặc tính unique : duy nhất
+        var id = Symbol('id');
+        var id2 = Symbol('id'); // khác nhau
+
+        console.log(id == id2);//false
+
+        //2
+        var myFunction = function() {
+
+        }
+
+        //Object type2 : 2tk
+        //1.Object
+        var myObject = {
+        //  key : value
+            name: 'Son Dang',
+            age: 18,
+            adress: 'Ha Noi',
+            myFunction: function () {
+
+            }
+        };
+
+        console.log('myObject', myObject);
+
+        //2.Array 
+        //khác object kp định nghĩa key
+
+        var myArray = [];
+
+        //Kiểm tra DL
+        var number = 1;
+        console.log(typeof(number));
+    </script>
+</body>
+</html>

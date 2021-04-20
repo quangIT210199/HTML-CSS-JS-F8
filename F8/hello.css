@@ -1,0 +1,176 @@
+ .header{
+    /*vì chiều ngang được kế thừa từ trình duyệt nên chỉ cần thêm height*/
+    height: 120px;
+    background-image: linear-gradient(0,#fe6233,#f6422e);
+}
+
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+    /* mặc định thẻ ul có paddng-left: 40px; nên phải bỏ đi */
+
+}
+
+.header__navbar-list{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 4px;
+}
+
+.header__navbar-item{
+    margin: 0px 8px;
+    position: relative;
+    min-height: 26px;
+}
+/*vì 2 thẻ li và a đều chứa chữ nên phải css chung hoặc k cũng dc
+-Đây là t thêm r
+.header__navbar-item{
+    margin: 0px 8px;
+    display: inline-block;
+    font-size: 1.3rem;
+    color: var(--white-color);
+    font-weight: 100;
+    position: relative;
+}*/
+.header__navbar-item,
+.header__navbar-item-link{
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link{
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__navbar-item:hover,
+.header__navbar-item-link:hover{
+    /*tạo cursor :là con trỏ chuột, pointer : là hình bàn tay*/
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.header__navbar-item--strong{
+    font-weight: 400;
+}
+
+.header__navbar-item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    background-color: #f96d5c;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);/*50% là 6px của 12px*/
+}
+
+/*Icon fontAwesome*/
+.header__navbar-icon-link{
+    color: var(--white-color);
+    text-decoration: none;
+    margin: 0 4px;
+}
+
+.header__navbar-icon{
+    font-size: 1.8rem;
+}
+
+
+/*thẻ span dùng để css riêng cho 1 tk khác biệt*/
+.header__navbar-title--no-pointer{
+    cursor: text;
+    color: var(--white-color);
+    /*n sẽ ghì đè cái hover*/
+}
+.header__navbar-icon-link:hover{
+     /*tạo cursor :là con trỏ chuột, pointer : là hình bàn tay*/
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/*CACH SỬA RỒI*/
+.header{
+    /*Vì thuộc tính của thẻ nav kế thừ từ thẻ head <-- body <-- html 
+    display : block nên chiều rộng bị chiếm trọn*/
+    height: 120px;
+    background-image: linear-gradient(0,#fe6233,#f6422e);
+}
+
+.header__navbar{
+    /*Cho thẻ nav thành flex để 2 thẻ ul nằm ngang xong căn ra 2 bên*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list{
+    list-style: none;
+    padding-left: 0;/*Vì thẻ ul mặc định có padding left là : 40px*/
+    margin-top: 4px;/*Chỉnh thẻ ul*/
+}
+
+.header__navbar-item{
+    margin: 0 8px;
+    position: relative;/*Chọn thẻ li làm trục cho thẻ con của n*/
+    min-height: 26px;
+}
+
+.header__navbar-item,
+.header__navbar-item-link{
+    display: inline-block;/*Cho thẻ li đang ở dạng display : list-item; thành inline-block trên 1 hàng*/
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link{
+    display: inline-flex;/*Cho thành inline-flex để sắp xếp các flex-item thành 1 hàng*/
+    align-items: center;
+}
+
+.header__navbar-icon-link:hover,
+.header__navbar-item:hover,
+.header__navbar-item-link:hover{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header__navbar-item--strong{
+    font-weight: 400;
+}
+
+.header__navbar-item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    background-color: #f96d5c;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);/*50% là 6px của 12px*/
+}
+/*Icon fontAwesome*/
+.header__navbar-icon-link{
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.header__navbar-icon{
+    font-size: 1.4rem;
+    margin: 0 4px;
+}
+/*thẻ span dùng để css riêng cho 1 tk khác biệt*/
+.header__navbar-title--no-pointer{
+    cursor: text;
+    color: var(--white-color);/*n sẽ ghì đè cái hover*/
+}

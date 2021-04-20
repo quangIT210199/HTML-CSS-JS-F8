@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<style>
+		.box{
+			height: 130px;
+			width: calc(2% + 80%);
+/*			background-color: linear-gradient();*/
+/*			background-color: rgba(151,33,35,0.6);*/
+			background-color: rgb(151,33,35);
+			opacity: 0.4;
+			
+		}
+/*
+		đối với background-color: linear-gradient(); thì mặc định là màu từ trên xg dưới 
+		VD: linear-gradient(red, yellow);
+		VD: trái sang phải linear-gradient(to right,red, yellow);
+		VD: chéo linear-gradient(to bottom right, red, yellow);
+		-calc() : dùng để thao tác tính toán
+		VD: width : calc(20% + 80%);
+		-attr() : thuộc tính với thẻ html thường kết hợp với thẻ giả
+*/
+		.box::after{
+			content: attr(quang);
+		}
+		a::after{
+			content: "("attr(href)")";
+		}
+	</style>
+	
+</head>
+
+<body>
+	<div class="box" quang="day la tu dat"></div>
+	<a href="http://facebook.com">Hoc lap trinh</a>
+	<h1>CSS Function</h1>
+	<ul>
+		<li>var()</li>
+		<li>linear-gradient()</li>
+		<li>rgba() : red green blue alpha</li>
+		<li>rgb()</li>
+		<li>calc()</li>
+		<li>attr()</li>
+	</ul>
+</body>
+</html>

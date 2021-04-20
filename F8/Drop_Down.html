@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            display: none;
+        }
+        label{
+            color: white;
+            width: 100%;
+            display: block ;
+            height: 100px;
+        }
+        .label{
+            display: block;
+            background-color: blue;
+
+            width: 100%;
+            height: 100px;
+        }
+
+        .show-hide:checked ~ .yellow{
+            height: 100px;
+            transition: all ease-in-out 0.2s;
+        }
+        .yellow{
+            display: block;
+            width: 100px;
+            height: 0;
+            transition: all ease-in-out 0.2s;
+            background-color: yellow;
+        }
+        .blue{
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="label">
+        <label for="show-hide">
+            show/hide
+        </label>
+    </div>
+    <div class="div">
+        <input type="checkbox" name="" id="show-hide" class="show-hide">
+        <div class="yellow">
+
+        </div>
+        <div class="blue">
+
+        </div>
+    </div>
+</body>
+</html>

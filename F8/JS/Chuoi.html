@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--1.Các cách để tạo chuỗi
+        -Cách tạo chuỗi
+        -Nên dùng cách nào? Lí do
+        -Kiểm tra data type
+        2.Một số cách sử dụng backslash in javascript (\) : vd : var fullName = 'Van Quang \' JS \''; => Van Quang ' JS ' và k bị lỗi syntax
+        3.Xem độ dài chuỗi : .lenght
+        4.Chú ý độ dài khi viết code
+        5. Template string ES6
+    -->
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var fullName ='Van Quang  '; //cách 1 nhanh hơn cách2
+        var cach2 = new String('Cach 2'); // cấp phát bộ nhớ cho đối tượng cach2
+        //cách 2 khi console.log(typeof cach2) => object chứ kp String
+        alert(cach2);
+
+        //3
+        console.log(fullName.length);
+        
+        //4 : nên viết k quá 80 kí tự , k thì nối các chuỗi với nhau
+
+        //nối 
+        var noiChuoi = "qqqqqqqqqqqqqqqqqqqqq" +  "1qqqqqqqqqqqqqqqqqqqqq" +  "2qqqqqqqqqqqqqqqqqqqqq";
+
+        //5 :
+        var firstName = 'Quang';
+        var lastName = 'Van';
+
+        console.log("Toi la " + firstName + lastName); //Cách cũ
+        // thì ES6 làm n nhìn đẹp hơn tiện hơn @@
+        console.log(`toi la: ${firstName} ${lastName} `);
+
+
+    </script>
+</body>
+</html>

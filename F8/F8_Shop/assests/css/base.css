@@ -1,0 +1,274 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color:#ee4d2d;
+    --boder-color:#dbdbdb;
+    --star-gold-color: #FFCE3E;
+    /* tạo biến cho navbar */
+    --navbar-height : 32px;
+    --header--height: 120px;
+    /* Tính chiều cao cho tk search */
+    --header-with-search-height: calc(var(--header--height) - var(--navbar-height )); 
+    --header-sort-bar-height: 46px; /*Cho tablet*/
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    /*đây là hack font chữ là 10px 1.2rem là 12px*/
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    /*lấy fonts mặc định trên gg roboto font*/
+    font-family: 'Roboto', sans-serif;
+    /* sans-serif là chủng chữ k có chân , kp là font.dùng khi lỗi k tải dc font*/
+    box-sizing: border-box;
+}
+
+/*Responsive*/
+
+/* .grid{
+    .row{
+        .column{
+            .row{
+                
+            }
+        }
+        .column{
+
+        }
+    }
+    .row{
+        .column{
+            
+        }
+    }
+    .row{
+        .column{
+            
+        }
+    }
+} */
+
+/* .grid{
+    width: 1200px;
+    max-width: 100%;
+    max-width khi màn hình thu nhỏ dưới 1200px thì n tự căn chỉnh cho đủ theo trình duyệt
+    margin: 0 auto;
+}
+
+.grid__full-width{
+    width: 100%;
+} */
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* Test */
+.grid__column-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-2-4{/*nằm treong tk column-10 nên là phải chia 100% theo n*/
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%; /*100% của column-10 / 5*/
+}
+
+.grid__column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+/*Animation*/
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*Viết base scale*/
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
+
+/* Base modal */
+.modal{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+}
+
+.modal__overlay{/*Làm lớp phủ*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal__body{/*Làm phần chính*/
+    --growth-from: 0.7;
+    --growth-to : 1;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    animation: growth linear 0.1s;
+}
+
+/*Button Style */
+.btn{/*Tính chung*/
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border-radius: 2px;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    line-height: 1.2rem;
+    background-color: var(--white-color);
+}
+
+.btn.btn--normal:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--primary{ /*Tính riêng*/
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn.btn--disabled{/*Hủy nút nếu k dùng*/
+    color: #ccc;
+    cursor: default;
+    /* filter: brightness(); Giarm độ sáng */
+    background-color: #c3c3c3c3;
+}
+
+.btn.btn--size-s{
+    height: 32px;
+    font-size: 12px; 
+    padding: 0 8px;
+}
+
+/* Selection */
+
+.select-input{
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: rgb(131,131,131);
+    position: relative;
+    top: 1px;
+}
+
+.select-input:hover .select-input__list{
+    display: block;
+}
+
+.select-input__list {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;/*Theo chiều cao của tk chứa nó : là tk select-input height:34px*/
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none;
+    display: none;
+}
+
+.select-input__link{
+    color: var(--text-color);
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
+}
+
+/* Pagination UI */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.pagination-item{
+    margin: 0 12px;
+}
+
+.pagination-item--active .pagination-item__link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active:hover .pagination-item__link{
+    /* filter: brightness(97%); */
+    background-color: #ed5c3f;
+}
+.pagination-item__link{
+    --height: 30px;
+    color: #939393;
+    text-decoration: none;
+    font-size: 2rem;
+    display: block;
+    min-width: 40px;
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 2px;
+    font-weight: 300;
+}   
+
+.pagination-item__icon{
+
+}

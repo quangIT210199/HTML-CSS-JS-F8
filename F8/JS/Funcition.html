@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Quy tắc đặt tên hàm
+    chứa a-z A-Z 0-9 _ $
+    k được đặt số ở kí tự đầu
+    -->
+    <script>
+        function test(){
+            alert("Goi ham bang call")
+        }
+
+        test();
+
+        //đối tượng arguments giúp ta định nghĩa biến cho các tham số, như hàm log(1,2,3,...);
+        function testArguments(){//k cần ghi tham số
+            console.log(arguments);
+         
+        //for
+        var myString ='';
+        for(var param of arguments){
+            console.log(param);
+            
+            myString += `${param} - `; // template
+            console.log(myString);
+            }
+        }
+        testArguments(1, 2, 3, 4);
+    </script>
+</body>
+</html>

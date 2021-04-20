@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 250px;
+            height: 400px;
+            background-color: blue;
+        }
+        .child{
+            /* Background-size: width hegith;
+            Background-size dùng cho  element nào sử dụng background-image*/
+            /* Background-size: 100px; thì chiều ngang là 100px, còn chiều dọc thì auto đúng height của ảnh
+            Background-size có mặc định repeat. */
+           /* padding-top: 100%;/*width bằng chiều ngang của thẻ chứa nó.còn height mặc định của ảnh*/
+            width: 100px;
+            height: 200px;
+            background-color: black;
+            background-image: url("https://img.tickid.vn/photos/resized/160x160/83-1581502939-myphamohui-lgvina.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.5s;
+        }
+
+        /* .parent:hover .child,
+        .parent:focus .child {
+            transform: scale(1.2);
+        }
+        .child::before {
+            content: "";
+            display: none;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(52, 73, 94, 0.5);
+        }
+
+        .parent:hover .child:before,
+        .parent:focus .child:before {
+        display: block;
+        } */
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+
+        </div>
+    </div>
+</body>
+</html>

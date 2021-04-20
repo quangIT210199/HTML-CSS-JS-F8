@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+        var myString = 'Hoc JS tai JS JS PTIT';
+        //Chính thức nói: Chuỗi là bất biến: Chuỗi không thể thay đổi, chỉ thay thế.
+        //Làm việc với chuỗi
+        //1.Lenght
+         console.log(myString.length);
+        //2.Find index
+        console.log(myString.indexOf('JS', 5)); // in ra vị trí đầu tiền tìm dc, k tìm dc thì in ra -1, muốn tìm thứ sau thì ('JS' , giá trị index sau cái thứ nhất) => JS thứ 2
+        console.log(myString.lastIndexOf('JS')); // trả về vị trí cuối.  k dc cũng -1
+        console.log(myString.search('\\T')); // hỗ trợ tìm theo biểu thức chính quy regex, search khác indexOf là k có đối số thứ 2 để tìm giá trị phía sau
+        //3.Cut string : cắt chuỗi thôi
+        console.log(myString.slice(0, 3)); // nếu giá trị âm thì dc tính từ cuối
+        //Sự khác biệt là substring()không thể chấp nhận các chỉ số tiêu cực là giá trị âm
+        console.log(myString.substring(0, 3));
+        //subStr nữa Sự khác biệt là tham số thứ hai chỉ định độ dài của phần được trích xuất.
+
+        //4.Replace : ghì đè, Các replace()phương pháp không làm thay đổi chuỗi nó được gọi vào. Nó trả về một chuỗi mới.
+        //nhưng nếu k có regex thì n chỉ thay thế từ đầu tiên
+        console.log(myString.replace('JS', 'JAVA')); // nó tạo ra chuỗi mới chứ k thay đổi chuỗi cũ
+        console.log(myString.replace(/JS/g, 'JAVA')); // regex tìm tất cả và ghi đè , g là tất cả, i là đầu tiên
+        console.log(myString); // k bị thay đổi chuỗi cũ
+
+        //5.Convert to upper case
+        //6.Convert to lower case
+        //7.Trim : dùng bỏ dấu trắng ở đầu và cuối khi nhập form từ ng dùng
+        console.log(myString.trim());
+        //8.Split
+        var splitTest = 'Quang, Huong, Truong';
+        var test = splitTest.split(','); // dùng regex dc
+        console.log(test);
+
+        //9.Get a charater by index
+        const name2 = 'Van Quang';
+        console.log(name2.charAt(0));
+
+        //10. concat : nối 2 string
+        //Tất cả các phương thức chuỗi trả về một chuỗi mới. Họ không sửa đổi chuỗi gốc.
+        //Chính thức nói: Chuỗi là bất biến: Chuỗi không thể thay đổi, chỉ thay thế.
+        var text1 = "Hello";
+        var text2 = "World!";
+        var text3 = text1.concat(" ",text2);
+        console.log(text3);
+        //cắt từng chữ trong string var text3 = text1.concat("");
+//hoisting
+        function sayHello(){
+            console.log(name);
+            console.log(age);
+            var name ='PTIT';
+            let age = 21;
+        }
+        sayHello();
+//         Mình giải thích câu này nhé: ``` name được khai báo với var. biến này sẽ được hoisted (một vùng nhớ sẽ được set up khi biến được khởi tạo) giá trị mặc định là undefined, bài toán trên chưa định nghĩa biến name tại dòng mà ta log ra,
+// => giá trị mặc định của nó vẫn là undefined. ```
+//      Các biến dc khai báo với const hoặc let cũng dc gọi là hoisted, không thể truy cập nếu chưa khởi tạo nó. khi mà truy cập đến 1 giá trị trước khi khởi tạo, JavaScript sẽ throws một ReferenceError. keywords cho cây trả lời này là “temporal dead zone”.
+    </script>
+</body>
+</html>
